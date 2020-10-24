@@ -11,7 +11,8 @@ pipeline {
     stage('Deploy to stage') {
       when {
         branch 'master'
-      }`steps {
+      }
+      steps {
         withCredentials([usernamePassword(credentialsId: 'webserver_login', passwordVariable: 'userpasswd', usernameVariable: 'username')]) {
 
           sshPublisher(

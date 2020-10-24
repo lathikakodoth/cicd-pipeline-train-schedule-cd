@@ -24,7 +24,7 @@ pipeline {
                       sshCredentials: [
                           encryptedPassphrase: "$userpasswd", 
                           username: "$username"
-                          ]
+                          ],
                       transfers: [
                           sshTransfer(
                               excludes: '',
